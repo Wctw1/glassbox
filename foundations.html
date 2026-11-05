@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>document.documentElement.classList.add("js")</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Module 1: How AI Actually Works · Glassbox</title>
+  <meta name="description" content="Learn what artificial intelligence is, how machine learning and neural networks work, how large language models generate text, and why AI makes mistakes.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Glassbox home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l11 6v14l-11 6-11-6V9z" fill="none" stroke="#23211d" stroke-width="2" stroke-linejoin="round"/><path d="M5 9l11 6 11-6M16 15v14" fill="none" stroke="#23211d" stroke-width="1.4" stroke-dasharray="2 2"/><circle cx="16" cy="15" r="3" fill="#c4532d"/></svg>
+      Glassbox
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="foundations.html" aria-current="page">1 · How AI Works</a>
+      <a href="tools.html">2 · Tools</a>
+      <a href="ethics.html">3 · Responsible Use</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="about.html">About</a>
+      <a href="references.html">References</a>
+      <a class="xp-pill" href="dashboard.html" title="Open your progress dashboard"><span class="lvl" data-level>1</span><span><span data-xp>0</span> XP</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <header class="module-hero">
+    <div class="wrap">
+      <span class="eyebrow"><span class="num">Module 01</span> · Fundamental concepts</span>
+      <h1>How AI Actually Works</h1>
+      <p class="lede">Before you can use AI well, you need a working picture of what's going on inside. This module walks from simple rules to the large language models behind today's chatbots. No math background required.</p>
+      <div class="meta"><span>5 sections</span><span>2 labs</span><span>1 quiz</span><span>≈ 30 min</span></div>
+      <div class="bar-label" style="max-width:420px;margin-top:22px"><span data-module-count="foundations">0 of 8 steps</span><span data-module-pct="foundations">0%</span></div>
+      <div class="bar" data-module-bar="foundations" role="progressbar" aria-label="Module 1 progress" aria-valuemin="0" aria-valuemax="100" style="margin-top:0"><i></i></div>
+    </div>
+  </header>
+
+  <div class="wrap module-layout">
+    <aside class="toc" aria-label="In this module">
+      <h4>In this module</h4>
+      <ol>
+        <li><a href="#f-what">1.1 What counts as AI?</a></li>
+        <li><a href="#f-ml">1.2 Learning from examples</a></li>
+        <li><a href="#f-nn">1.3 Neural networks</a></li>
+        <li><a href="#f-llm">1.4 How chatbots write</a></li>
+        <li><a href="#f-limits">1.5 Where AI goes wrong</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+      </ol>
+    </aside>
+
+    <article class="lesson">
+
+      <section id="f-what">
+        <span class="eyebrow"><span class="num">1.1</span> · 5 min</span>
+        <h2>What counts as AI?</h2>
+        <p><strong>Artificial intelligence (AI)</strong> is a broad name for computer systems that do tasks we usually connect with human thinking: recognizing images, understanding speech, making predictions, or writing text. You've probably used AI today without noticing. Your phone's face unlock, autocorrect, a music app's recommendations, and your email's spam filter all use it.</p>
+        <p>It helps to separate two very different ideas that both get called “AI”:</p>
+        <dl class="def-list">
+          <dt>Narrow AI</dt><dd>A system built to do one kind of task, like translating languages or detecting tumors in scans. Every AI system that exists today is narrow AI, including chatbots, even though they can talk about many topics.</dd>
+          <dt>General AI (AGI)</dt><dd>A hypothetical system that could learn and reason across any task the way a person can. It's a research goal and a popular topic in movies, but it does not exist yet and experts disagree about when, or whether, it will.</dd>
+        </dl>
+        <h3>Two ways to make a computer “smart”</h3>
+        <div class="compare">
+          <div>
+            <h4>Rules written by people</h4>
+            <p>A programmer writes every rule: <em>“If the email contains ‘FREE MONEY’, mark it as spam.”</em> This is predictable and easy to explain, but it breaks the moment spammers write “FR3E M0NEY.”</p>
+          </div>
+          <div>
+            <h4>Patterns learned from data</h4>
+            <p>Instead of writing rules, we show the computer thousands of emails already labeled spam or not spam, and it figures out the patterns itself. This is <strong>machine learning</strong>, and it powers almost all modern AI.</p>
+          </div>
+        </div>
+        <div class="callout">
+          <span class="tag">Key idea</span>
+          <p>Modern AI is less about programming intelligence and more about <strong>learning patterns from huge amounts of data</strong>. That one fact explains most of AI's strengths, and most of its weaknesses.</p>
+        </div>
+        <div class="read-check"><button class="btn small" type="button" data-read="f-what">Mark section complete · +10 XP</button><span>Finished reading? Lock in your XP.</span></div>
+      </section>
+
+      <section id="f-ml">
+        <span class="eyebrow"><span class="num">1.2</span> · 7 min</span>
+        <h2>Learning from examples</h2>
+        <p><strong>Machine learning (ML)</strong> is the process of a computer improving at a task by finding patterns in data. The collection of examples it learns from is called the <strong>training data</strong>. After training, the result is a <strong>model</strong>: a saved set of patterns that can make predictions about new data it has never seen.</p>
+        <p>Think of a spam filter. Each email can be described by <strong>features</strong>, which are measurable details like how many links it has, or how many words are in ALL CAPS. In training, each email also has a <strong>label</strong>: the correct answer, “spam” or “not spam.” The model's job is to learn which combinations of features usually go with which label.</p>
+        <h3>Three main styles of learning</h3>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Type</th><th>How it learns</th><th>Everyday example</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Supervised</strong></td><td>From examples that come with correct answers (labels).</td><td>Spam filters, recognizing handwritten digits</td></tr>
+              <tr><td><strong>Unsupervised</strong></td><td>Finds groups or structure in data that has no labels.</td><td>Grouping shoppers with similar habits</td></tr>
+              <tr><td><strong>Reinforcement</strong></td><td>Tries actions and learns from rewards or penalties.</td><td>Game-playing AI, robots learning to walk</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="lab" id="lab-classifier">
+          <div class="lab-head"><span class="t">Lab 1 · Train a spam classifier</span><span class="xp" data-lab-xp="lab-classifier">+25 XP</span></div>
+          <div class="lab-body">
+            <p>Each dot is an email. Further right = more links; higher up = more ALL-CAPS words. Pick a label, click the chart to add at least <b>6 examples</b>, then press <b>Train</b>. The model labels new emails by looking at the <b>3 closest examples</b> (a method called <em>k-nearest neighbors</em>).</p>
+            <div class="lab-row">
+              <div class="seg" role="group" aria-label="Label for new examples">
+                <button type="button" data-class="0" aria-pressed="true"><span class="dot" style="background:#2f6b57"></span>Not spam</button>
+                <button type="button" data-class="1" aria-pressed="false"><span class="dot" style="background:#c4532d"></span>Spam</button>
+              </div>
+              <button class="btn small" type="button" data-train>Train model</button>
+              <button class="btn small ghost" type="button" data-reset>Reset</button>
+            </div>
+            <canvas class="classifier" aria-label="Interactive chart. Click to add labeled email examples." role="img"></canvas>
+            <div class="feedback" aria-live="polite">Pick a label, then click on the chart to add examples.</div>
+          </div>
+        </div>
+        <p>What you just saw is the heart of machine learning: <strong>the model is only as good as its data</strong>. If the examples are wrong, missing, or unbalanced, the predictions will be too.</p>
+        <div class="read-check"><button class="btn small" type="button" data-read="f-ml">Mark section complete · +10 XP</button><span>Finished reading? Lock in your XP.</span></div>
+      </section>
+
+      <section id="f-nn">
+        <span class="eyebrow"><span class="num">1.3</span> · 6 min</span>
+        <h2>Neural networks</h2>
+        <p>Our spam classifier only used two features. Recognizing a face or understanding a sentence takes thousands. For problems like that, AI researchers use <strong>neural networks</strong>: layers of simple math units loosely inspired by neurons in the brain.</p>
+        <figure>
+          <svg viewBox="0 0 640 260" role="img" aria-labelledby="nn-t nn-d">
+            <title id="nn-t">A small neural network</title>
+            <desc id="nn-d">Three columns of circles labeled input layer, hidden layer, and output layer, with lines connecting every circle to every circle in the next column. Each line has a weight.</desc>
+            <g stroke="#cfc6b5" stroke-width="1">
+              <path d="M110 60L320 40M110 60L320 100M110 60L320 160M110 60L320 220M110 130L320 40M110 130L320 100M110 130L320 160M110 130L320 220M110 200L320 40M110 200L320 100M110 200L320 160M110 200L320 220"/>
+              <path d="M320 40L530 95M320 100L530 95M320 160L530 95M320 220L530 95M320 40L530 165M320 100L530 165M320 160L530 165M320 220L530 165"/>
+            </g>
+            <path d="M110 130L320 100" stroke="#c4532d" stroke-width="3"/>
+            <rect x="196" y="100" width="44" height="20" fill="#fdfcfa" stroke="#c4532d"/>
+            <text x="218" y="114" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#c4532d">×0.8</text>
+            <g fill="#fdfcfa" stroke="#23211d" stroke-width="2">
+              <circle cx="110" cy="60" r="16"/><circle cx="110" cy="130" r="16"/><circle cx="110" cy="200" r="16"/>
+              <circle cx="320" cy="40" r="16"/><circle cx="320" cy="100" r="16"/><circle cx="320" cy="160" r="16"/><circle cx="320" cy="220" r="16"/>
+              <circle cx="530" cy="95" r="16"/><circle cx="530" cy="165" r="16"/>
+            </g>
+            <g font-family="IBM Plex Mono, monospace" font-size="12" fill="#7a7366" text-anchor="middle">
+              <text x="110" y="250">input layer</text><text x="320" y="254">hidden layer</text><text x="530" y="210">output layer</text>
+              <text x="590" y="99" text-anchor="start" fill="#23211d">cat</text><text x="590" y="169" text-anchor="start" fill="#23211d">dog</text>
+              <text x="40" y="134" text-anchor="middle" fill="#23211d">pixels</text>
+            </g>
+          </svg>
+          <figcaption>Every connection has a weight (like ×0.8). Training adjusts those weights until the outputs come out right.</figcaption>
+        </figure>
+        <h3>How a network learns</h3>
+        <ol>
+          <li><strong>Guess.</strong> Data goes in the input layer, passes through the hidden layers, and the network produces an output. At first, it's mostly random.</li>
+          <li><strong>Measure the error.</strong> The output is compared to the correct label. The difference is the error, or <em>loss</em>.</li>
+          <li><strong>Adjust.</strong> Each weight is nudged a tiny bit in the direction that would have made the error smaller. This process is called <em>gradient descent</em>.</li>
+          <li><strong>Repeat</strong> millions of times over the whole training set, until the network is accurate on examples it has never seen.</li>
+        </ol>
+        <p>When a network has many hidden layers, we call it <strong>deep learning</strong>. Today's largest models have billions of weights (often called <em>parameters</em>). No person sets those numbers by hand, which is why even the engineers who build a model can't always explain exactly why it gave a specific answer.</p>
+        <div class="callout green">
+          <span class="tag">Try this</span>
+          <p>Next time an app recognizes your face or a song, remember: it isn't “seeing” like you do. It's running numbers through layers of weights that were tuned on millions of examples.</p>
+        </div>
+        <div class="read-check"><button class="btn small" type="button" data-read="f-nn">Mark section complete · +10 XP</button><span>Finished reading? Lock in your XP.</span></div>
+      </section>
+
+      <section id="f-llm">
+        <span class="eyebrow"><span class="num">1.4</span> · 7 min</span>
+        <h2>How chatbots write</h2>
+        <p>Chatbots like ChatGPT, Claude, Gemini and Copilot run on <strong>large language models (LLMs)</strong>. An LLM is a very large neural network trained on an enormous amount of text, including books, websites and code. Its training goal sounds simple: <strong>predict the next piece of text</strong>.</p>
+        <p>LLMs don't read whole words the way you do. They break text into <strong>tokens</strong>, chunks that are often a word or part of a word. When you send a message, the model looks at all the tokens so far and calculates how likely every possible next token is. It picks one, adds it to the text, and repeats, one token at a time, until the answer is done.</p>
+        <h3>From text predictor to helpful assistant</h3>
+        <ol>
+          <li><strong>Pre-training:</strong> the model learns language patterns by predicting the next token across a huge collection of text.</li>
+          <li><strong>Fine-tuning:</strong> it's trained further on example conversations so it follows instructions and answers questions.</li>
+          <li><strong>Human feedback:</strong> people rate responses, and the model is adjusted toward answers people found helpful and safe. This step is often called <em>reinforcement learning from human feedback</em> (RLHF).</li>
+        </ol>
+
+        <div class="lab" id="lab-nextword">
+          <div class="lab-head"><span class="t">Lab 2 · Be the language model</span><span class="xp" data-lab-xp="lab-nextword">+25 XP</span></div>
+          <div class="lab-body">
+            <p>This tiny model learned from 22 sentences about school. It only looks at the <b>last word</b> to guess the next one. Click a prediction to add it, or let the model pick. It chooses randomly, weighted by probability, just like real LLMs. Build a sentence of <b>8+ words</b>.</p>
+            <div class="lab-row">
+              <div style="flex:1 1 200px">
+                <label for="nw-start">Start with</label>
+                <select id="nw-start" data-start><option>the</option><option>a</option></select>
+              </div>
+              <button class="btn small" type="button" data-auto>Let the model pick</button>
+              <button class="btn small ghost" type="button" data-restart>Restart</button>
+            </div>
+            <p style="font-family:var(--serif);font-size:1.35rem;margin:14px 0 4px;color:var(--ink)" data-sentence aria-live="polite">the</p>
+            <div class="predictions" aria-label="Predicted next words"></div>
+            <div class="feedback" aria-live="polite"></div>
+          </div>
+        </div>
+        <p>Notice that the model can produce sentences that sound fine but aren't <em>true</em>. It only knows what words tend to follow each other. Real LLMs are vastly more capable and look at thousands of previous tokens, but the core mechanism is the same: <span class="mark">they generate likely text, not checked facts.</span></p>
+        <div class="read-check"><button class="btn small" type="button" data-read="f-llm">Mark section complete · +10 XP</button><span>Finished reading? Lock in your XP.</span></div>
+      </section>
+
+      <section id="f-limits">
+        <span class="eyebrow"><span class="num">1.5</span> · 5 min</span>
+        <h2>Where AI goes wrong</h2>
+        <p>Knowing how AI works makes its failure points predictable. Here are the big ones every student should know:</p>
+        <dl class="def-list">
+          <dt>Hallucination</dt><dd>The model produces information that sounds confident and specific but is false, like fake quotes, wrong dates, or citations for books and articles that don't exist. It happens because the model is generating <em>likely-sounding</em> text, not looking facts up.</dd>
+          <dt>Knowledge cutoff</dt><dd>A model only knows what was in its training data, which stops at a certain date. Unless a tool is connected to search, it may not know about recent events.</dd>
+          <dt>Bias</dt><dd>Models learn from human-created data, so they can repeat stereotypes and unfair patterns in that data. You'll explore this in Module 3.</dd>
+          <dt>No real understanding</dt><dd>An LLM can explain a math concept well and still get a simple calculation wrong. Fluent language is not proof of correct reasoning.</dd>
+          <dt>Sensitivity to wording</dt><dd>Small changes in how you ask can produce very different answers. That's why prompt writing (Module 2) matters.</dd>
+        </dl>
+        <div class="callout warn">
+          <span class="tag">Remember</span>
+          <p>Treat AI output like a first draft from a fast, well-read classmate who sometimes makes things up. <strong>Useful, but always worth checking.</strong></p>
+        </div>
+        <div class="read-check"><button class="btn small" type="button" data-read="f-limits">Mark section complete · +10 XP</button><span>Finished reading? Lock in your XP.</span></div>
+      </section>
+
+      <section id="quiz" style="border-bottom:0">
+        <span class="eyebrow"><span class="num">Quiz</span> · Module 1</span>
+        <div class="quiz" data-quiz="foundations"></div>
+      </section>
+
+      <nav class="next-module" aria-label="Module navigation">
+        <a href="index.html"><span>← Back</span><b>Course home</b></a>
+        <a class="right" href="tools.html"><span>Next module →</span><b>Tools &amp; Techniques</b></a>
+      </nav>
+    </article>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap cols">
+    <div>
+      <a class="brand" href="index.html" style="font-size:1.2rem">Glassbox</a>
+      <p style="margin-top:10px;max-width:42ch">An interactive AI learning portal built by our TSA chapter for the High School Webmaster event. All graphics are original. Progress is stored only in your browser.</p>
+      <p>&copy; <span data-year>2026</span> Glassbox Team</p>
+    </div>
+    <div>
+      <h4>Learn</h4>
+      <ul><li><a href="foundations.html">How AI Works</a></li><li><a href="tools.html">Tools &amp; Techniques</a></li><li><a href="ethics.html">Responsible Use</a></li><li><a href="glossary.html">Glossary</a></li></ul>
+    </div>
+    <div>
+      <h4>Site</h4>
+      <ul><li><a href="dashboard.html">Dashboard</a></li><li><a href="about.html">About &amp; Work Log</a></li><li><a href="references.html">References</a></li></ul>
+    </div>
+  </div>
+</footer>
+
+<script src="js/progress.js"></script>
+<script src="js/labs.js"></script>
+<script src="js/quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>document.documentElement.classList.add("js")</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Progress Dashboard · Glassbox</title>
+  <meta name="description" content="Track your XP, level, module progress and badges in the Glassbox AI learning portal.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Glassbox home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l11 6v14l-11 6-11-6V9z" fill="none" stroke="#23211d" stroke-width="2" stroke-linejoin="round"/><path d="M5 9l11 6 11-6M16 15v14" fill="none" stroke="#23211d" stroke-width="1.4" stroke-dasharray="2 2"/><circle cx="16" cy="15" r="3" fill="#c4532d"/></svg>
+      Glassbox
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="foundations.html">1 · How AI Works</a>
+      <a href="tools.html">2 · Tools</a>
+      <a href="ethics.html">3 · Responsible Use</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="about.html">About</a>
+      <a href="references.html">References</a>
+      <a class="xp-pill" href="dashboard.html" title="Open your progress dashboard"><span class="lvl" data-level>1</span><span><span data-xp>0</span> XP</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <header class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">Your progress</span>
+      <h1>Dashboard</h1>
+      <p class="lede">Everything you've completed in Glassbox, in one place. Progress is saved in this browser on this device. It isn't sent anywhere and no account is needed.</p>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="dash-top">
+      <div>
+        <span class="eyebrow">Current level</span>
+        <div class="level-name">Level <span data-level>1</span> · <span data-level-name>Observer</span></div>
+        <div class="bar-label"><span id="lvl-progress-label">0 XP to next level</span><span id="lvl-next">Apprentice</span></div>
+        <div class="bar accent" id="lvl-bar" role="progressbar" aria-label="Progress to next level" aria-valuemin="0" aria-valuemax="100"><i></i></div>
+        <div class="levels" id="levels"></div>
+      </div>
+      <div>
+        <span class="eyebrow">Total experience</span>
+        <div class="big-xp"><span data-xp>0</span><small style="font-size:1rem;color:var(--muted)"> / <span id="xp-max">0</span> XP</small></div>
+        <p style="margin:14px 0 6px;color:var(--ink-2)"><b id="badge-count">0</b> of <span id="badge-total">13</span> badges earned</p>
+        <p style="margin:0;color:var(--ink-2)"><b id="module-count">0</b> of 3 modules complete</p>
+        <p id="next-step" style="margin:16px 0 0"></p>
+      </div>
+    </div>
+
+    <div class="mod-progress" id="mod-progress"></div>
+
+    <section class="section">
+      <div class="section-head">
+        <div><span class="eyebrow">Achievements</span><h2>Badges</h2></div>
+        <p>Badges unlock when you finish labs, modules and challenges. Locked badges show what to do next.</p>
+      </div>
+      <div class="badges" id="badges"></div>
+    </section>
+
+    <section class="section two-col">
+      <div>
+        <span class="eyebrow">History</span>
+        <h2>Recent activity</h2>
+        <ul class="activity" id="activity"></ul>
+      </div>
+      <div>
+        <span class="eyebrow">How XP works</span>
+        <h2>Earning points</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Action</th><th>XP</th></tr></thead>
+            <tbody>
+              <tr><td>Finish a reading section</td><td>+10</td></tr>
+              <tr><td>Complete a lab</td><td>+25</td></tr>
+              <tr><td>Pass a module quiz (70%+)</td><td>+50</td></tr>
+              <tr><td>Perfect quiz score bonus</td><td>+25</td></tr>
+              <tr><td>Explore 10 glossary terms</td><td>+20</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout">
+          <span class="tag">Start over</span>
+          <p>Sharing this computer, or want to try again? Reset erases all progress saved in this browser.</p>
+          <button class="btn small ghost" type="button" id="reset">Reset my progress</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap cols">
+    <div>
+      <a class="brand" href="index.html" style="font-size:1.2rem">Glassbox</a>
+      <p style="margin-top:10px;max-width:42ch">An interactive AI learning portal built by our TSA chapter for the High School Webmaster event. All graphics are original. Progress is stored only in your browser.</p>
+      <p>&copy; <span data-year>2026</span> Glassbox Team</p>
+    </div>
+    <div>
+      <h4>Learn</h4>
+      <ul><li><a href="foundations.html">How AI Works</a></li><li><a href="tools.html">Tools &amp; Techniques</a></li><li><a href="ethics.html">Responsible Use</a></li><li><a href="glossary.html">Glossary</a></li></ul>
+    </div>
+    <div>
+      <h4>Site</h4>
+      <ul><li><a href="dashboard.html">Dashboard</a></li><li><a href="about.html">About &amp; Work Log</a></li><li><a href="references.html">References</a></li></ul>
+    </div>
+  </div>
+</footer>
+
+<script src="js/progress.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

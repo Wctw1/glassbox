@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>document.documentElement.classList.add("js")</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glassbox: An AI Field Guide for High School Students</title>
+  <meta name="description" content="Glassbox is an interactive learning portal that teaches high school students how AI works, how to use AI tools well, and how to use them responsibly.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Glassbox home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l11 6v14l-11 6-11-6V9z" fill="none" stroke="#23211d" stroke-width="2" stroke-linejoin="round"/><path d="M5 9l11 6 11-6M16 15v14" fill="none" stroke="#23211d" stroke-width="1.4" stroke-dasharray="2 2"/><circle cx="16" cy="15" r="3" fill="#c4532d"/></svg>
+      Glassbox
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="foundations.html">1 · How AI Works</a>
+      <a href="tools.html">2 · Tools</a>
+      <a href="ethics.html">3 · Responsible Use</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="about.html">About</a>
+      <a href="references.html">References</a>
+      <a class="xp-pill" href="dashboard.html" title="Open your progress dashboard"><span class="lvl" data-level>1</span><span><span data-xp>0</span> XP</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap grid">
+      <div>
+        <span class="eyebrow">A field guide for grades 9–12</span>
+        <h1>AI isn't <em>magic.</em><br>It's <span class="mark">math, data,</span> and choices people make.</h1>
+        <p class="lede">Glassbox opens up the “black box.” In three short modules you'll learn how AI systems really work, how to use AI tools to study smarter, and how to use them honestly at school.</p>
+        <div class="actions">
+          <a class="btn" href="foundations.html">Start Module 1 →</a>
+          <a class="btn ghost" href="dashboard.html">View my progress</a>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <svg viewBox="0 0 440 300" role="img" aria-labelledby="hero-t hero-d">
+          <title id="hero-t">Inside the glass box</title>
+          <desc id="hero-d">Diagram: input words enter a transparent box containing a small neural network of connected nodes, and a predicted next word comes out the other side.</desc>
+          <defs>
+            <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5 0 10z" fill="#23211d"/></marker>
+          </defs>
+          <!-- input -->
+          <g font-family="IBM Plex Mono, monospace" font-size="12" fill="#23211d">
+            <text x="6" y="118">“the</text><text x="6" y="140">student</text><text x="6" y="162">opened</text><text x="6" y="184">the…”</text>
+          </g>
+          <path d="M70 150h38" stroke="#23211d" stroke-width="1.5" marker-end="url(#arr)"/>
+          <!-- box -->
+          <path d="M118 52l58-28h148l-58 28z" fill="#f3eee5" stroke="#23211d" stroke-width="1.5"/>
+          <path d="M324 24v196l-58 28V52z" fill="#f3eee5" stroke="#23211d" stroke-width="1.5"/>
+          <rect x="118" y="52" width="148" height="196" fill="#fdfcfa" fill-opacity=".55" stroke="#23211d" stroke-width="1.5"/>
+          <!-- network -->
+          <g stroke="#7a7366" stroke-width=".9" opacity=".75">
+            <path d="M146 92L192 80M146 92L192 124M146 92L192 168M146 92L192 212M146 150L192 80M146 150L192 124M146 150L192 168M146 150L192 212M146 208L192 80M146 208L192 124M146 208L192 168M146 208L192 212"/>
+            <path d="M192 80L240 120M192 124L240 120M192 168L240 120M192 212L240 120M192 80L240 180M192 124L240 180M192 168L240 180M192 212L240 180"/>
+          </g>
+          <path d="M146 150L192 124L240 120" stroke="#c4532d" stroke-width="2.4" fill="none"/>
+          <g fill="#fdfcfa" stroke="#23211d" stroke-width="1.5">
+            <circle cx="146" cy="92" r="8"/><circle cx="146" cy="150" r="8"/><circle cx="146" cy="208" r="8"/>
+            <circle cx="192" cy="80" r="8"/><circle cx="192" cy="124" r="8"/><circle cx="192" cy="168" r="8"/><circle cx="192" cy="212" r="8"/>
+            <circle cx="240" cy="180" r="8"/>
+          </g>
+          <circle cx="240" cy="120" r="8" fill="#c4532d" stroke="#23211d" stroke-width="1.5"/>
+          <g font-family="IBM Plex Mono, monospace" font-size="10" fill="#7a7366">
+            <text x="128" y="270">input</text><text x="176" y="270">hidden</text><text x="226" y="270">output</text>
+          </g>
+          <!-- output -->
+          <path d="M276 150h50" stroke="#23211d" stroke-width="1.5" marker-end="url(#arr)"/>
+          <g font-family="IBM Plex Mono, monospace" font-size="12">
+            <text x="336" y="128" fill="#c4532d" font-weight="600">laptop 61%</text>
+            <text x="336" y="150" fill="#23211d">door 22%</text>
+            <text x="336" y="172" fill="#7a7366">book 9%</text>
+            <text x="336" y="194" fill="#7a7366">…</text>
+          </g>
+        </svg>
+        <figcaption>A language model doesn't “know” the answer. It scores possible next words and picks a likely one.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="stat-row" aria-label="Portal at a glance">
+      <div><b>3</b><span>learning modules</span></div>
+      <div><b>6</b><span>hands-on labs</span></div>
+      <div><b>13</b><span>badges to earn</span></div>
+      <div><b>~90</b><span>minutes, start to finish</span></div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">The course</span>
+          <h2>Three modules, in order</h2>
+        </div>
+        <p>Each module has short reading sections, interactive labs and a 5-question quiz. Finish a section to earn XP; finish a whole module to earn its badge. Your progress saves automatically in this browser, with no account or login needed.</p>
+      </div>
+
+      <div class="chapters">
+        <a class="chapter" href="foundations.html">
+          <div class="chapter-num">01</div>
+          <div>
+            <h3>How AI Actually Works</h3>
+            <p>What counts as AI, how machines learn from examples, what a neural network is, and why chatbots sometimes make things up.</p>
+            <span class="topics">Machine learning · Training data · Neural networks · LLMs · Hallucinations</span>
+          </div>
+          <div class="chapter-side">
+            <div class="bar-label"><span data-module-count="foundations">0 of 8 steps</span><span data-module-pct="foundations">0%</span></div>
+            <div class="bar" data-module-bar="foundations" role="progressbar" aria-label="Module 1 progress" aria-valuemin="0" aria-valuemax="100"><i></i></div>
+            <span class="chapter-go">Open module →</span>
+          </div>
+        </a>
+        <a class="chapter" href="tools.html">
+          <div class="chapter-num">02</div>
+          <div>
+            <h3>Tools &amp; Techniques</h3>
+            <p>The main types of AI tools, how to write prompts that get useful answers, study strategies that actually help you learn, and how to fact-check AI output.</p>
+            <span class="topics">AI tool types · Prompt writing · Study with AI · SIFT · Lateral reading</span>
+          </div>
+          <div class="chapter-side">
+            <div class="bar-label"><span data-module-count="tools">0 of 7 steps</span><span data-module-pct="tools">0%</span></div>
+            <div class="bar" data-module-bar="tools" role="progressbar" aria-label="Module 2 progress" aria-valuemin="0" aria-valuemax="100"><i></i></div>
+            <span class="chapter-go">Open module →</span>
+          </div>
+        </a>
+        <a class="chapter" href="ethics.html">
+          <div class="chapter-num">03</div>
+          <div>
+            <h3>Using AI Responsibly</h3>
+            <p>Academic integrity, how to cite AI, bias in AI systems, protecting your privacy, and the bigger impacts of AI on society.</p>
+            <span class="topics">School policies · APA &amp; MLA citations · Bias · Privacy · Deepfakes</span>
+          </div>
+          <div class="chapter-side">
+            <div class="bar-label"><span data-module-count="ethics">0 of 8 steps</span><span data-module-pct="ethics">0%</span></div>
+            <div class="bar" data-module-bar="ethics" role="progressbar" aria-label="Module 3 progress" aria-valuemin="0" aria-valuemax="100"><i></i></div>
+            <span class="chapter-go">Open module →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">How it works</span>
+          <h2>Learn by doing, not just reading</h2>
+        </div>
+        <p>We built Glassbox around one idea: the best way to understand AI is to poke at it. Every module includes labs that run right in your browser.</p>
+      </div>
+      <div class="split">
+        <div>
+          <svg class="icon" viewBox="0 0 40 40" aria-hidden="true"><rect x="4" y="8" width="32" height="24" fill="none" stroke="#23211d" stroke-width="2"/><circle cx="13" cy="24" r="2.6" fill="#2f6b57"/><circle cx="18" cy="18" r="2.6" fill="#2f6b57"/><circle cx="27" cy="15" r="2.6" fill="#c4532d"/><circle cx="30" cy="22" r="2.6" fill="#c4532d"/><path d="M22 10v20" stroke="#23211d" stroke-dasharray="2 2"/></svg>
+          <h3>Train a real model</h3>
+          <p>Click to add examples and watch a spam classifier draw its decision boundary. Add a mislabeled point and see what bad data does.</p>
+        </div>
+        <div>
+          <svg class="icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 12h28M6 20h18M6 28h24" stroke="#23211d" stroke-width="2" stroke-linecap="round"/><rect x="26" y="16" width="10" height="8" fill="#c4532d"/></svg>
+          <h3>Think like a chatbot</h3>
+          <p>Build a sentence one predicted word at a time using a tiny language model, and see why fluent doesn't mean correct.</p>
+        </div>
+        <div>
+          <svg class="icon" viewBox="0 0 40 40" aria-hidden="true"><circle cx="17" cy="17" r="10" fill="none" stroke="#23211d" stroke-width="2"/><path d="M24.5 24.5L34 34" stroke="#23211d" stroke-width="3" stroke-linecap="round"/><path d="M12 17l3.5 3.5L22 14" fill="none" stroke="#2f6b57" stroke-width="2.4"/></svg>
+          <h3>Catch the mistakes</h3>
+          <p>Fact-check an AI answer, judge real-world school scenarios, and build a proper APA or MLA citation for AI help.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap two-col">
+      <div>
+        <span class="eyebrow">Why this matters</span>
+        <h2>AI is already in your classroom</h2>
+        <p>Students are using chatbots for homework help, writing feedback and studying, often without anyone explaining how these tools work or where they fail. UNESCO's global guidance on generative AI in education calls on schools to build students' AI literacy so they can use these tools safely, critically and ethically.</p>
+        <p>Glassbox is our answer: a free, no-login portal written by students, for students, that treats AI as something you can understand and question, not something to fear or blindly trust.</p>
+        <a href="about.html">Read about our team and process →</a>
+      </div>
+      <div>
+        <div class="callout green">
+          <span class="tag">Your progress</span>
+          <p style="margin-bottom:6px"><b>Level <span data-level>1</span> · <span data-level-name>Observer</span></b></p>
+          <p style="font-family:var(--mono);font-size:.9rem"><span data-xp>0</span> XP earned</p>
+          <p>Earn XP by finishing sections (+10), labs (+25) and quizzes (+50). Get every quiz question right for a bonus.</p>
+          <a class="btn small" href="dashboard.html">Open dashboard</a>
+        </div>
+        <div class="callout">
+          <span class="tag">Before you start</span>
+          <p>Every school and teacher sets their own AI rules. Glassbox teaches general good practice, but <b>your class policy always comes first.</b></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap cols">
+    <div>
+      <a class="brand" href="index.html" style="font-size:1.2rem">Glassbox</a>
+      <p style="margin-top:10px;max-width:42ch">An interactive AI learning portal built by our TSA chapter for the High School Webmaster event. All graphics are original. Progress is stored only in your browser.</p>
+      <p>&copy; <span data-year>2026</span> Glassbox Team</p>
+    </div>
+    <div>
+      <h4>Learn</h4>
+      <ul><li><a href="foundations.html">How AI Works</a></li><li><a href="tools.html">Tools &amp; Techniques</a></li><li><a href="ethics.html">Responsible Use</a></li><li><a href="glossary.html">Glossary</a></li></ul>
+    </div>
+    <div>
+      <h4>Site</h4>
+      <ul><li><a href="dashboard.html">Dashboard</a></li><li><a href="about.html">About &amp; Work Log</a></li><li><a href="references.html">References</a></li></ul>
+    </div>
+  </div>
+</footer>
+
+<script src="js/progress.js"></script>
+</body>
+</html>

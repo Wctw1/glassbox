@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>document.documentElement.classList.add("js")</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About the Project · Glassbox</title>
+  <meta name="description" content="Meet the team behind Glassbox, see our design process, and review our project work log and how we managed the build.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Glassbox home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l11 6v14l-11 6-11-6V9z" fill="none" stroke="#23211d" stroke-width="2" stroke-linejoin="round"/><path d="M5 9l11 6 11-6M16 15v14" fill="none" stroke="#23211d" stroke-width="1.4" stroke-dasharray="2 2"/><circle cx="16" cy="15" r="3" fill="#c4532d"/></svg>
+      Glassbox
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="foundations.html">1 · How AI Works</a>
+      <a href="tools.html">2 · Tools</a>
+      <a href="ethics.html">3 · Responsible Use</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="references.html">References</a>
+      <a class="xp-pill" href="dashboard.html" title="Open your progress dashboard"><span class="lvl" data-level>1</span><span><span data-xp>0</span> XP</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <header class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">About the project</span>
+      <h1>Built by students, for students</h1>
+      <p class="lede">Glassbox is our chapter's entry for the TSA High School Webmaster event. The challenge: design an interactive AI learning portal that helps high school students understand AI, use it well, and use it ethically, with game-style progress tracking to keep them engaged.</p>
+    </div>
+  </header>
+
+  <div class="wrap">
+
+    <section class="section two-col">
+      <div>
+        <span class="eyebrow">Our mission</span>
+        <h2>Make the black box see-through</h2>
+        <p>Most of us use AI tools regularly, but when we started this project we realized we couldn't fully explain how they worked, when they were wrong, or what our school's rules actually allowed. We wanted to build the guide we wished we'd had: short, hands-on, honest about AI's limits, and written in a student's voice.</p>
+        <p>The name “Glassbox” comes from the opposite of a “black box,” which is a system whose inner workings are hidden. Our goal is for every student to leave able to explain what's happening inside.</p>
+      </div>
+      <div>
+        <span class="eyebrow">Design goals</span>
+        <h2>What we aimed for</h2>
+        <ul>
+          <li><strong>Learn by doing:</strong> six labs that run right in the browser.</li>
+          <li><strong>Accurate and sourced:</strong> every fact checked against a credible source (see <a href="references.html">References</a>).</li>
+          <li><strong>Motivating:</strong> XP, five levels and thirteen badges that show progress through each module.</li>
+          <li><strong>Accessible:</strong> keyboard navigation, readable contrast, alt text and reduced-motion support.</li>
+          <li><strong>Private:</strong> no login, no tracking; progress stays in the student's own browser.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div><span class="eyebrow">The team</span><h2>Who did what</h2></div>
+        <p>We're a team of four. Two of us focused on programming, and two focused on design and planning the content. We mapped out every task on Trello and checked in on each other's work as we went.</p>
+      </div>
+      <!-- TEAM: Initials only (no full names) to keep the entry anonymous for judging. -->
+      <div class="team four">
+        <div class="member"><div class="avatar" aria-hidden="true">WW</div><h3>Programmer</h3><span class="role">Team member WW</span><p>Co-wrote the HTML, CSS and JavaScript, including the page structure, progress tracking, quizzes and labs. Helped set up the Trello timeline and published the site.</p></div>
+        <div class="member"><div class="avatar" aria-hidden="true">EH</div><h3>Programmer</h3><span class="role">Team member EH</span><p>Co-wrote the HTML, CSS and JavaScript, built and tested the interactive features, and fixed bugs found during testing.</p></div>
+        <div class="member"><div class="avatar" aria-hidden="true">TC</div><h3>Designer &amp; Outliner</h3><span class="role">Team member TC</span><p>Planned the layout and look of the site and outlined the module content, giving the programmers a clear picture of what to build. Edited colors and styles directly in the code.</p></div>
+        <div class="member"><div class="avatar" aria-hidden="true">LK</div><h3>Designer &amp; Outliner</h3><span class="role">Team member LK</span><p>Helped design the layout and visual style and outlined the lessons and labs. Worked in the CSS to adjust colors and styling as the design came together.</p></div>
+      </div>
+    </section>
+
+    <section class="section two-col">
+      <div>
+        <span class="eyebrow">Process</span>
+        <h2>How we built it</h2>
+        <ol class="timeline">
+          <li class="key"><span class="when">Phase 1 · Research</span><h4>Understand the challenge</h4><p>Broke down the design brief into a requirements checklist, talked about how students actually use AI, and gathered credible sources.</p></li>
+          <li><span class="when">Phase 2 · Plan</span><h4>Outline and assign</h4><p>TC and LK outlined the modules and chose the three-module structure. We set up Trello like a Gantt chart so everyone could see what they had to do, how to do it, and when.</p></li>
+          <li><span class="when">Phase 3 · Design</span><h4>Wireframes and style</h4><p>TC and LK sketched the layouts and picked a warm “field guide” look, so it would feel like a notebook, not an ad. That gave the programmers a picture to build from.</p></li>
+          <li class="key"><span class="when">Phase 4 · Build</span><h4>Code it by hand</h4><p>WW and EH built every page with HTML, CSS and plain JavaScript, learning as we went with W3Schools and AI. TC and LK went into the code to change colors and styles. No website builders or templates.</p></li>
+          <li><span class="when">Phase 5 · Test</span><h4>Break it on purpose</h4><p>Tested the pages in different browsers and on phones, clicked through every lab and quiz, and fixed what broke.</p></li>
+          <li class="key"><span class="when">Phase 6 · Refine &amp; launch</span><h4>Fix, polish, publish</h4><p>Fixed issues from testing, proofread every page, finished the reference page and launched on a public host.</p></li>
+        </ol>
+      </div>
+      <div>
+        <span class="eyebrow">Early sketches</span>
+        <h2>Wireframes</h2>
+        <p>Our first layouts focused on making the next step obvious: a clear module order, a visible progress bar, and labs that stand out from the reading.</p>
+        <div class="wire" style="grid-template-columns:1fr 1fr">
+          <figure>
+            <svg viewBox="0 0 160 200" role="img" aria-label="Wireframe of the home page with a hero, statistics row and list of three modules"><rect x="4" y="4" width="152" height="192" fill="none" stroke="#23211d" stroke-width="1.5"/><rect x="4" y="4" width="152" height="14" fill="#f3eee5" stroke="#23211d"/><rect x="12" y="28" width="80" height="10" fill="#23211d"/><rect x="12" y="42" width="66" height="5" fill="#cfc6b5"/><rect x="12" y="50" width="70" height="5" fill="#cfc6b5"/><rect x="12" y="62" width="34" height="10" fill="#c4532d"/><rect x="100" y="28" width="48" height="44" fill="none" stroke="#23211d" stroke-dasharray="3 2"/><path d="M4 84h152" stroke="#23211d"/><g fill="#cfc6b5"><rect x="12" y="96" width="136" height="24"/><rect x="12" y="126" width="136" height="24"/><rect x="12" y="156" width="136" height="24"/></g></svg>
+            <figcaption>Home page</figcaption>
+          </figure>
+          <figure>
+            <svg viewBox="0 0 160 200" role="img" aria-label="Wireframe of a module page with a sidebar table of contents, lesson text and a highlighted lab box"><rect x="4" y="4" width="152" height="192" fill="none" stroke="#23211d" stroke-width="1.5"/><rect x="4" y="4" width="152" height="14" fill="#f3eee5" stroke="#23211d"/><rect x="12" y="28" width="30" height="60" fill="none" stroke="#23211d" stroke-dasharray="3 2"/><g fill="#cfc6b5"><rect x="50" y="28" width="96" height="8" fill="#23211d"/><rect x="50" y="42" width="96" height="4"/><rect x="50" y="50" width="90" height="4"/><rect x="50" y="58" width="94" height="4"/></g><rect x="50" y="70" width="96" height="50" fill="none" stroke="#c4532d" stroke-width="2"/><rect x="50" y="70" width="96" height="9" fill="#23211d"/><g fill="#cfc6b5"><rect x="50" y="130" width="96" height="4"/><rect x="50" y="138" width="88" height="4"/></g><rect x="50" y="152" width="42" height="9" fill="#2f6b57"/></svg>
+            <figcaption>Module page</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div><span class="eyebrow">Project management</span><h2>Work log</h2></div>
+        <p>We used Trello like a <b>Gantt chart</b>: every task was a card on a timeline with who owned it, notes on how to do it, and when it was due. That let each of us see our part and how it fit with everyone else's.</p>
+      </div>
+      <!-- WORK LOG: Add real dates from your Trello board in the first column if you have them. Initials only. -->
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Phase</th><th>Task</th><th>Who</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Plan</td><td>Read the design brief and TSA rules; list what the site needs</td><td>All</td><td>Done</td></tr>
+            <tr><td>Plan</td><td>Set up the Trello timeline (Gantt chart) with every task, owner and due date</td><td>All</td><td>Done</td></tr>
+            <tr><td>Plan</td><td>Outline the three modules, lessons, labs and quizzes</td><td>TC, LK</td><td>Done</td></tr>
+            <tr><td>Design</td><td>Sketch page layouts and choose colors and fonts</td><td>TC, LK</td><td>Done</td></tr>
+            <tr><td>Learn</td><td>Learn HTML, CSS and JavaScript with W3Schools and AI</td><td>WW, EH</td><td>Done</td></tr>
+            <tr><td>Build</td><td>Build page templates, navigation and stylesheet</td><td>WW, EH</td><td>Done</td></tr>
+            <tr><td>Build</td><td>Build XP, levels, badges and the progress dashboard</td><td>WW, EH</td><td>Done</td></tr>
+            <tr><td>Build</td><td>Build the six interactive labs and module quizzes</td><td>WW, EH</td><td>Done</td></tr>
+            <tr><td>Build</td><td>Adjust colors and styles in the code to match the design</td><td>TC, LK</td><td>Done</td></tr>
+            <tr><td>Research</td><td>Find, read and check sources for every fact</td><td>All</td><td>Done</td></tr>
+            <tr><td>Test</td><td>Test in different browsers and on phones; fix bugs</td><td>All</td><td>Done</td></tr>
+            <tr><td>Finish</td><td>Write the reference page, copyright checklist and AI reflection</td><td>All</td><td>Done</td></tr>
+            <tr><td>Launch</td><td>Publish on GitHub Pages and check every link</td><td>WW</td><td>Done</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section two-col">
+      <div>
+        <span class="eyebrow">Under the hood</span>
+        <h2>Technology</h2>
+        <p>Glassbox is hand-coded. We did not use a website builder, content management system or front-end framework.</p>
+        <ul class="tag-list"><li>HTML5</li><li>CSS3</li><li>JavaScript (ES5+)</li><li>Canvas API</li><li>Inline SVG</li><li>localStorage</li><li>Google Fonts</li><li>W3Schools</li><li>Git &amp; GitHub</li><li>GitHub Pages</li><li>Trello</li></ul>
+        <p style="margin-top:16px">Progress is saved with the browser's <code>localStorage</code>, so it works without accounts and no student data ever leaves the device.</p>
+      </div>
+      <div>
+        <span class="eyebrow">For everyone</span>
+        <h2>Accessibility</h2>
+        <ul>
+          <li>Text and background colors were checked against WCAG 2.2 contrast guidelines.</li>
+          <li>Every page works with a keyboard alone, with a “Skip to content” link and visible focus outlines.</li>
+          <li>Diagrams include text descriptions for screen readers.</li>
+          <li>Layouts adapt to phones, tablets and desktops.</li>
+          <li>Animations are turned off for users who prefer reduced motion.</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap cols">
+    <div>
+      <a class="brand" href="index.html" style="font-size:1.2rem">Glassbox</a>
+      <p style="margin-top:10px;max-width:42ch">An interactive AI learning portal built by our TSA chapter for the High School Webmaster event. All graphics are original. Progress is stored only in your browser.</p>
+      <p>&copy; <span data-year>2026</span> Glassbox Team</p>
+    </div>
+    <div>
+      <h4>Learn</h4>
+      <ul><li><a href="foundations.html">How AI Works</a></li><li><a href="tools.html">Tools &amp; Techniques</a></li><li><a href="ethics.html">Responsible Use</a></li><li><a href="glossary.html">Glossary</a></li></ul>
+    </div>
+    <div>
+      <h4>Site</h4>
+      <ul><li><a href="dashboard.html">Dashboard</a></li><li><a href="about.html">About &amp; Work Log</a></li><li><a href="references.html">References</a></li></ul>
+    </div>
+  </div>
+</footer>
+
+<script src="js/progress.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>document.documentElement.classList.add("js")</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Module 2: Tools & Techniques · Glassbox</title>
+  <meta name="description" content="A practical guide to AI tools for high school students: types of tools, how to write effective prompts, study strategies, and how to fact-check AI output.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Glassbox home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l11 6v14l-11 6-11-6V9z" fill="none" stroke="#23211d" stroke-width="2" stroke-linejoin="round"/><path d="M5 9l11 6 11-6M16 15v14" fill="none" stroke="#23211d" stroke-width="1.4" stroke-dasharray="2 2"/><circle cx="16" cy="15" r="3" fill="#c4532d"/></svg>
+      Glassbox
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="foundations.html">1 · How AI Works</a>
+      <a href="tools.html" aria-current="page">2 · Tools</a>
+      <a href="ethics.html">3 · Responsible Use</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="about.html">About</a>
+      <a href="references.html">References</a>
+      <a class="xp-pill" href="dashboard.html" title="Open your progress dashboard"><span class="lvl" data-level>1</span><span><span data-xp>0</span> XP</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <header class="module-hero">
+    <div class="wrap">
+      <span class="eyebrow"><span class="num">Module 02</span> · Practical tools &amp; techniques</span>
+      <h1>Tools &amp; Techniques</h1>
+      <p class="lede">Knowing how AI works is step one. Step two is using it well: choosing the right kind of tool, asking clearly, using it to actually learn, and checking what it tells you.</p>
+      <div class="meta"><span>4 sections</span><span>2 labs</span><span>1 quiz</span><span>≈ 30 min</span></div>
+      <div class="bar-label" style="max-width:420px;margin-top:22px"><span data-module-count="tools">0 of 7 steps</span><span data-module-pct="tools">0%</span></div>
+      <div class="bar" data-module-bar="tools" role="progressbar" aria-label="Module 2 progress" aria-valuemin="0" aria-valuemax="100"><i></i></div>
+    </div>
+  </header>
+
+  <div class="wrap module-layout">
+    <aside class="toc" aria-label="In this module">
+      <h4>In this module</h4>
+      <ol>
+        <li><a href="#t-toolbox">2.1 The AI toolbox</a></li>
+        <li><a href="#t-prompting">2.2 Writing better prompts</a></li>
+        <li><a href="#t-study">2.3 Studying with AI</a></li>
+        <li><a href="#t-verify">2.4 Check everything</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+      </ol>
+    </aside>
+
+    <article class="lesson">
+
+      <section id="t-toolbox">
+        <span class="eyebrow"><span class="num">2.1</span> · 6 min</span>
+        <h2>The AI toolbox</h2>
+        <p>“AI” isn't one tool. Different tools are built for different jobs, and picking the right one saves time and cuts down on mistakes. Here are the main categories you're likely to run into. Product names change quickly, so focus on the <em>type</em> of tool.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Tool type</th><th>Good for</th><th>Watch out for</th><th>Examples</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Chat assistants</strong></td><td>Explaining concepts, brainstorming, feedback on drafts</td><td>Hallucinated facts and sources</td><td>ChatGPT, Claude, Gemini, Microsoft Copilot</td></tr>
+              <tr><td><strong>AI search / research tools</strong></td><td>Finding sources, summarizing search results with links</td><td>Summaries that misstate what a source says</td><td>Perplexity, Google AI Overviews</td></tr>
+              <tr><td><strong>Writing aids</strong></td><td>Grammar, clarity, tone</td><td>Changing your voice or meaning</td><td>Grammarly, built-in editor tools</td></tr>
+              <tr><td><strong>Tutoring tools</strong></td><td>Step-by-step guidance without just giving answers</td><td>Still needs checking on tricky problems</td><td>Khanmigo</td></tr>
+              <tr><td><strong>Coding assistants</strong></td><td>Explaining errors, suggesting code</td><td>Code that runs but has bugs or security holes</td><td>GitHub Copilot</td></tr>
+              <tr><td><strong>Image &amp; media generators</strong></td><td>Concept art, mockups, visual ideas</td><td>Copyright questions; realistic fakes</td><td>Adobe Firefly, DALL·E</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout">
+          <span class="tag">Check first</span>
+          <p>Many AI services set a minimum age (often 13) and some require a parent's permission for users under 18. Your school may also have approved tools with stronger privacy protections. <strong>Use what your school allows.</strong></p>
+        </div>
+        <div class="read-check"><button class="btn small" type="button" data-read="t-toolbox">Mark section complete · +10 XP</button><span>Finished reading? Lock in your XP.</span></div>
+      </section>
+
+      <section id="t-prompting">
+        <span class="eyebrow"><span class="num">2.2</span> · 8 min</span>
+        <h2>Writing better prompts</h2>
+        <p>A <strong>prompt</strong> is what you type to an AI tool. Because the model predicts a likely response from your words, vague prompts get generic answers. Specific prompts get specific, useful ones. Strong prompts usually include five parts:</p>
+        <dl class="def-list">
+          <dt>Task</dt><dd>Exactly what you want done. Use an action verb: <em>explain, compare, quiz me, give feedback on</em>.</dd>
+          <dt>Context</dt><dd>Who you are and why you're asking: your grade level, class, and what you already know.</dd>
+          <dt>Role</dt><dd>Who the AI should act as: <em>a patient tutor, a tough debate coach, a museum guide</em>.</dd>
+          <dt>Format</dt><dd>What the answer should look like: <em>a table, 5 bullet points, under 150 words</em>.</dd>
+          <dt>Limits</dt><dd>Rules to follow: <em>don't give me the answer yet, use only the text I pasted, ask me one question at a time</em>.</dd>
+        </dl>
+        <div class="compare">
+          <div class="bad">
+            <h4>Weak prompt</h4>
+            <pre>explain the french revolution</pre>
+            <p>You'll get a long, generic overview that may not match your class or what you need.</p>
+          </div>
+          <div class="good">
+            <h4>Strong prompt</h4>
+            <pre>I'm a 9th grader in World History. Act as a tutor. Explain the 3 main causes of the French Revolution in simple terms, one short paragraph each. Then ask me one question to check I understood.</pre>
+            <p>Clear audience, task, format and a next step.</p>
+          </div>
+        </div>
+        <p>Prompting is a conversation. If the first answer isn't right, follow up: <em>“Make it shorter,” “Give me an example from sports,”</em> or <em>“What's one thing you might have gotten wrong here?”</em></p>
+
+        <div class="lab" id="lab-prompt">
+          <div class="lab-head"><span class="t">Lab 3 · Prompt builder</span><span class="xp" data-lab-xp="lab-prompt">+25 XP</span></div>
+          <div class="lab-body">
+            <p>Fill in the five parts for something you're studying right now. Score <b>80 or higher</b> to complete the lab. Stuck? Load an example.</p>
+            <div class="two-col" style="gap:14px 20px">
+              <div><label for="pb-task">Task: what should it do?</label><textarea id="pb-task" placeholder="Explain… / Quiz me on… / Give feedback on…"></textarea></div>
+              <div><label for="pb-context">Context: who are you?</label><textarea id="pb-context" placeholder="I'm in 11th grade chemistry and…"></textarea></div>
+              <div><label for="pb-role">Role: who should it act as?</label><input type="text" id="pb-role" placeholder="a patient tutor"></div>
+              <div><label for="pb-format">Format: what should it look like?</label><input type="text" id="pb-format" placeholder="5 bullet points, under 150 words"></div>
+            </div>
+            <div style="margin-top:14px"><label for="pb-limits">Limits: any rules?</label><input type="text" id="pb-limits" placeholder="Don't give me the answer until I try first"></div>
+            <div class="meter"><div class="bar"><i></i></div><b>0/100</b></div>
+            <ul class="checklist" aria-label="Prompt parts"></ul>
+            <div class="prompt-out" aria-live="polite"></div>
+            <div class="lab-row"><button class="btn small ghost" type="button" data-example>Load an example</button></div>
+            <div class="feedback" aria-live="polite"></div>
+          </div>
+        </div>
+        <div class="read-check"><button class="btn small" type="button" data-read="t-prompting">Mark section complete · +10 XP</button><span>Finished reading? Lock in your XP.</span></div>
+      </section>
+
+      <section id="t-study">
+        <span class="eyebrow"><span class="num">2.3</span> · 6 min</span>
+        <h2>Studying with AI</h2>
+        <p>The research on learning is clear on one thing: <strong>you learn by doing the thinking yourself</strong> by recalling, explaining and practicing. AI can either help with that or quietly replace it. The difference is how you use it.</p>
+        <div class="compare">
+          <div class="bad"><h4>Replaces your thinking</h4><ul><li>“Write my essay.”</li><li>“Answer these homework questions.”</li><li>“Summarize the book so I don't have to read it.”</li></ul></div>
+          <div class="good"><h4>Supports your thinking</h4><ul><li>“Quiz me on my notes.”</li><li>“Explain where my reasoning went wrong.”</li><li>“Give me feedback, but don't rewrite it.”</li></ul></div>
+        </div>
+        <h3>Five study prompts worth saving</h3>
+        <p>Copy these, then replace the brackets with your topic. Always check your teacher's AI policy first.</p>
+        <div class="prompt-chip">Explain [topic] like I'm new to it. Use one real-world example, then check my understanding with one question.</div>
+        <div class="prompt-chip">Here are my class notes: [paste notes]. Make 10 practice questions from them. Wait for my answers before telling me if I'm right.</div>
+        <div class="prompt-chip">Act as a Socratic tutor for [topic]. Don't give me answers. Ask me guiding questions until I figure it out.</div>
+        <div class="prompt-chip">Here is my draft: [paste draft]. Point out the 3 weakest parts of my argument. Do not rewrite anything.</div>
+        <div class="prompt-chip">My [subject] test is in [number] days. I struggle with [topics]. Make a short daily study plan using active recall.</div>
+        <div class="callout green">
+          <span class="tag">Study tip</span>
+          <p>After an AI explains something, close the tab and try to explain it back in your own words, out loud or on paper. If you can't, you haven't learned it yet.</p>
+        </div>
+        <div class="read-check"><button class="btn small" type="button" data-read="t-study">Mark section complete · +10 XP</button><span>Finished reading? Lock in your XP.</span></div>
+      </section>
+
+      <section id="t-verify">
+        <span class="eyebrow"><span class="num">2.4</span> · 8 min</span>
+        <h2>Check everything</h2>
+        <p>Since AI can hallucinate, the most valuable AI skill isn't prompting. It's <strong>verifying</strong>. Professional fact-checkers use a habit called <strong>lateral reading</strong>: instead of staring at one source to decide if it's trustworthy, they open new tabs and see what other reliable sources say.</p>
+        <p>A simple way to remember the process is <strong>SIFT</strong>, a method developed by digital-literacy researcher Mike Caulfield:</p>
+        <dl class="def-list">
+          <dt>S: Stop</dt><dd>Before you believe or use a claim, pause. Ask: do I know this source? Does this seem too perfect or too shocking?</dd>
+          <dt>I: Investigate</dt><dd>Investigate the source. Who made it, and are they in a position to know?</dd>
+          <dt>F: Find</dt><dd>Find better coverage. Search for the claim and see whether trusted sources agree.</dd>
+          <dt>T: Trace</dt><dd>Trace claims, quotes and data back to the original. Does the original actually say that?</dd>
+        </dl>
+        <h3>Red flags in AI answers</h3>
+        <ul>
+          <li>Very specific numbers, dates or quotes with no source.</li>
+          <li>Citations you can't find in a library database or search engine.</li>
+          <li>Different answers when you ask the same question again.</li>
+          <li>Claims about recent events (the model may be past its knowledge cutoff).</li>
+        </ul>
+
+        <div class="lab" id="lab-hallucination">
+          <div class="lab-head"><span class="t">Lab 4 · Spot the hallucination</span><span class="xp" data-lab-xp="lab-hallucination">+25 XP</span></div>
+          <div class="lab-body">
+            <p>A student asked a chatbot: <em>“Who invented the World Wide Web?”</em> Below is the answer, split into sentences. <b>Click every sentence you think is false.</b> Use lateral reading if you want. Open a new tab and check!</p>
+            <div class="claims">
+              <button type="button" class="claim" aria-pressed="false" data-false="false">Tim Berners-Lee, a British computer scientist, proposed the World Wide Web in 1989 while working at CERN in Switzerland.<span class="why" hidden>✓ True. His proposal, “Information Management: A Proposal,” is dated March 1989.</span></button>
+              <button type="button" class="claim" aria-pressed="false" data-false="true">He also created the first web browser, which he named Mosaic.<span class="why" hidden>✗ False. His browser was called WorldWideWeb (later renamed Nexus). Mosaic was a different browser released in 1993 by a team at the University of Illinois's NCSA.</span></button>
+              <button type="button" class="claim" aria-pressed="false" data-false="false">The first website, hosted at info.cern.ch, explained what the Web was and how to use it.<span class="why" hidden>✓ True. CERN still hosts a restored copy of that first site.</span></button>
+              <button type="button" class="claim" aria-pressed="false" data-false="false">In April 1993, CERN released the Web software into the public domain so anyone could use it for free.<span class="why" hidden>✓ True. CERN made the decision on April 30, 1993.</span></button>
+              <button type="button" class="claim" aria-pressed="false" data-false="true">Berners-Lee was awarded the Nobel Prize in Physics in 1995 for this invention.<span class="why" hidden>✗ False. He has never won a Nobel Prize. He did receive the A.M. Turing Award (often called the “Nobel Prize of computing”) for 2016.</span></button>
+              <button type="button" class="claim" aria-pressed="false" data-false="false">He later founded the World Wide Web Consortium (W3C), which develops standards for the Web.<span class="why" hidden>✓ True. He founded the W3C in 1994.</span></button>
+              <button type="button" class="claim" aria-pressed="false" data-false="true">Source: Harrington, J. (1998). “The Web Before the Web.” <em>Journal of Early Network Studies</em>, 4(2), 112–130.<span class="why" hidden>✗ False. We could not find this author, article, or journal in any library database or search engine. This is what a fabricated citation looks like: neat, specific, and fake.</span></button>
+            </div>
+            <div class="lab-row"><button class="btn small" type="button" data-check>Check my answers</button><button class="btn small ghost" type="button" data-retry hidden>Try again</button></div>
+            <div class="feedback" aria-live="polite"></div>
+          </div>
+        </div>
+        <div class="read-check"><button class="btn small" type="button" data-read="t-verify">Mark section complete · +10 XP</button><span>Finished reading? Lock in your XP.</span></div>
+      </section>
+
+      <section id="quiz" style="border-bottom:0">
+        <span class="eyebrow"><span class="num">Quiz</span> · Module 2</span>
+        <div class="quiz" data-quiz="tools"></div>
+      </section>
+
+      <nav class="next-module" aria-label="Module navigation">
+        <a href="foundations.html"><span>← Previous module</span><b>How AI Actually Works</b></a>
+        <a class="right" href="ethics.html"><span>Next module →</span><b>Using AI Responsibly</b></a>
+      </nav>
+    </article>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap cols">
+    <div>
+      <a class="brand" href="index.html" style="font-size:1.2rem">Glassbox</a>
+      <p style="margin-top:10px;max-width:42ch">An interactive AI learning portal built by our TSA chapter for the High School Webmaster event. All graphics are original. Progress is stored only in your browser.</p>
+      <p>&copy; <span data-year>2026</span> Glassbox Team</p>
+    </div>
+    <div>
+      <h4>Learn</h4>
+      <ul><li><a href="foundations.html">How AI Works</a></li><li><a href="tools.html">Tools &amp; Techniques</a></li><li><a href="ethics.html">Responsible Use</a></li><li><a href="glossary.html">Glossary</a></li></ul>
+    </div>
+    <div>
+      <h4>Site</h4>
+      <ul><li><a href="dashboard.html">Dashboard</a></li><li><a href="about.html">About &amp; Work Log</a></li><li><a href="references.html">References</a></li></ul>
+    </div>
+  </div>
+</footer>
+
+<script src="js/progress.js"></script>
+<script src="js/labs.js"></script>
+<script src="js/quiz.js"></script>
+</body>
+</html>
